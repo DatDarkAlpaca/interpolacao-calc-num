@@ -1,5 +1,6 @@
 import csv
 
+
 def import_csv(filepath: str, delimiter: str = ',') -> list:
     results = []
 
