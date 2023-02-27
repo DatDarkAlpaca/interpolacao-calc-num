@@ -5,7 +5,7 @@ import csv
 
 def generate_flight_info(filepath: str, flight_delimiter: str = ';') -> list[FlightInfo]:
     results = []
-    
+
     csv_data = import_csv(filepath, delimiter=flight_delimiter)
     for row in csv_data[1:]:
         results.append(FlightInfo(*row))
