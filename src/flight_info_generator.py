@@ -13,15 +13,17 @@ def generate_flight_info(filepath: str, flight_delimiter: str = ';') -> list[Fli
     return results
 
 
-def export_flight_info(filepath:str, flight_data: list[FlightInfo]) -> None:
+def export_flight_info(filepath:str, data_filepath: str) -> None:
+    flight_data = generate_flight_info(data_filepath)
+
     with open(filepath, mode='w', newline='', encoding='utf-8') as csv_file:
         fieldnames = [
-            'Sigla ICAO Empresa Aérea', 
+            'Sigla ICAO Empresa Aérea',
             'Sigla ICAO Aeroporto Origem',
-            'Descrição Aeroporto Origem',
             'Sigla ICAO Aeroporto Destino',
-            'Sigla ICAO Aeroporto Destino',
-            'Número de Assentos'
+            'Número de Assentos',
+            'Partida Real',
+            'Chegada Real'
         ]
 
         flight_writer = csv.DictWriter(csv_file, fieldnames=fieldnames, delimiter=';')
@@ -31,8 +33,8 @@ def export_flight_info(filepath:str, flight_data: list[FlightInfo]) -> None:
             flight_writer.writerow({
                 'Sigla ICAO Empresa Aérea': flight.ICAO_acronym, 
                 'Sigla ICAO Aeroporto Origem': flight.ICAO_airport_origin,
-                'Descrição Aeroporto Origem': flight.airport_origin_description,
                 'Sigla ICAO Aeroporto Destino': flight.ICAO_airport_destination,
-                'Sigla ICAO Aeroporto Destino': flight.airport_destination_description,
-                'Número de Assentos': flight.number_of_seats
-            }) 
+                'Número de Assentos': flight.number_of_seats,
+                'Partida Real': flight.actual_departure,
+                'Chegada Real': flight.actual_arrival
+            })

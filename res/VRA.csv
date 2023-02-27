@@ -1,6 +1,3 @@
-# CSV-File created with merge-csv.com
-# -----------------------------------------------------------
-
 ﻿Sigla ICAO Empresa Aérea;Empresa Aérea;Número Voo;Código DI;Código Tipo Linha;Modelo Equipamento;Número de Assentos;Sigla ICAO Aeroporto Origem;Descrição Aeroporto Origem;Partida Prevista;Partida Real;Sigla ICAO Aeroporto Destino;Descrição Aeroporto Destino;Chegada Prevista;Chegada Real;Situação Voo;Justificativa;Referência;Situação Partida;Situação Chegada
 AZU;AZUL LINHAS AÉREAS BRASILEIRAS S/A;4468;0;N;E195;118;SBEG;EDUARDO GOMES - MANAUS - AM - BRASIL;02/01/2022 12:50;02/01/2022 13:28;SWPI;JÚLIO BÉLEM - PARINTINS - AM - BRASIL;02/01/2022 13:45;02/01/2022 14:18;REALIZADO;;02/01/2022 00:00:00;Atraso 30-60;Atraso 30-60
 AZU;AZUL LINHAS AÉREAS BRASILEIRAS S/A;4468;0;N;E195;118;SBEG;EDUARDO GOMES - MANAUS - AM - BRASIL;03/01/2022 12:50;03/01/2022 12:56;SWPI;JÚLIO BÉLEM - PARINTINS - AM - BRASIL;03/01/2022 13:45;03/01/2022 13:49;REALIZADO;;03/01/2022 00:00:00;Pontual;Pontual
